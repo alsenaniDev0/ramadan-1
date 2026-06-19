@@ -1,0 +1,244 @@
+{
+    "id": "premium-personal-portfolio",
+    "name": "موقع شخصي احترافي",
+    "version": "1.0.0",
+    "html": "index.html",
+    "css": "style.css",
+    "fields": [
+        {
+            "key": "icon",
+            "label": "الأيقونة",
+            "type": "icon",
+            "required": true,
+            "defaultValue": "💼",
+            "options": [
+                {
+                    "label": "💼",
+                    "value": "💼"
+                },
+                {
+                    "label": "🧑‍💻",
+                    "value": "🧑‍💻"
+                },
+                {
+                    "label": "🎨",
+                    "value": "🎨"
+                },
+                {
+                    "label": "🚀",
+                    "value": "🚀"
+                },
+                {
+                    "label": "✨",
+                    "value": "✨"
+                }
+            ]
+        },
+        {
+            "key": "fullName",
+            "label": "الاسم الكامل",
+            "type": "text",
+            "required": true,
+            "defaultValue": "اكتب اسمك هنا",
+            "placeholder": "مثال: محمد السناني",
+            "maxLength": 70
+        },
+        {
+            "key": "role",
+            "label": "المسمى المهني",
+            "type": "text",
+            "required": true,
+            "defaultValue": "Full Stack Developer",
+            "placeholder": "مثال: Full Stack Developer",
+            "maxLength": 80
+        },
+        {
+            "key": "tagline",
+            "label": "نبذة قصيرة في البداية",
+            "type": "textarea",
+            "required": true,
+            "defaultValue": "أصمم وأطور تجارب رقمية احترافية تجمع بين الأداء العالي، التصميم الجميل، وسهولة الاستخدام.",
+            "minLength": 10,
+            "maxLength": 220
+        },
+        {
+            "key": "about",
+            "label": "نبذة عنك",
+            "type": "textarea",
+            "required": true,
+            "defaultValue": "أنا مطور شغوف ببناء تطبيقات ومواقع عصرية تساعد الأفراد والشركات على الظهور بشكل احترافي على الإنترنت. أركز على كتابة كود نظيف، تصميم واجهات سهلة، وتجربة مستخدم مميزة.",
+            "minLength": 20,
+            "maxLength": 500
+        },
+        {
+            "key": "experience",
+            "label": "سنوات الخبرة",
+            "type": "text",
+            "required": true,
+            "defaultValue": "+3",
+            "placeholder": "مثال: +3"
+        },
+        {
+            "key": "projectsCount",
+            "label": "عدد المشاريع",
+            "type": "text",
+            "required": true,
+            "defaultValue": "+25",
+            "placeholder": "مثال: +25"
+        },
+        {
+            "key": "clientsCount",
+            "label": "عدد العملاء",
+            "type": "text",
+            "required": true,
+            "defaultValue": "+15",
+            "placeholder": "مثال: +15"
+        },
+        {
+            "key": "skills",
+            "label": "المهارات",
+            "type": "list",
+            "listStyle": "tags",
+            "required": true,
+            "minItems": 1,
+            "maxItems": 20,
+            "defaultValue": [
+                "Angular",
+                "Firebase",
+                "TypeScript",
+                "HTML",
+                "CSS",
+                "UI/UX"
+            ],
+            "placeholder": "مثال:\nAngular\nFirebase\nTypeScript"
+        },
+        {
+            "key": "projects",
+            "label": "المشاريع",
+            "type": "repeater",
+            "required": true,
+            "minItems": 1,
+            "maxItems": 6,
+            "hint": "أضف مشاريعك السابقة، ويمكنك إضافة أكثر من مشروع.",
+            "defaultValue": [
+                {
+                    "title": "منصة دعوات رقمية",
+                    "description": "منصة تتيح للمستخدم إنشاء دعوات وتهاني رقمية بتصاميم متحركة وروابط مشاركة مباشرة.",
+                    "url": "#"
+                },
+                {
+                    "title": "لوحة تحكم إدارية",
+                    "description": "لوحة تحكم لإدارة المحتوى والقوالب والبيانات بطريقة سهلة ومنظمة.",
+                    "url": "#"
+                },
+                {
+                    "title": "موقع شركة تعريفي",
+                    "description": "موقع تعريفي حديث يعرض خدمات الشركة، المميزات، وطرق التواصل بشكل احترافي.",
+                    "url": "#"
+                }
+            ],
+            "itemFields": [
+                {
+                    "key": "title",
+                    "label": "عنوان المشروع",
+                    "type": "text",
+                    "required": true,
+                    "placeholder": "مثال: منصة دعوات رقمية",
+                    "maxLength": 80
+                },
+                {
+                    "key": "description",
+                    "label": "وصف المشروع",
+                    "type": "textarea",
+                    "required": true,
+                    "placeholder": "اكتب وصف مختصر للمشروع",
+                    "maxLength": 220
+                },
+                {
+                    "key": "url",
+                    "label": "رابط المشروع",
+                    "type": "url",
+                    "required": false,
+                    "placeholder": "https://example.com"
+                }
+            ]
+        },
+        {
+            "key": "contactTitle",
+            "label": "عنوان التواصل",
+            "type": "text",
+            "required": true,
+            "defaultValue": "هل لديك مشروع جديد؟",
+            "maxLength": 90
+        },
+        {
+            "key": "contactMessage",
+            "label": "رسالة التواصل",
+            "type": "textarea",
+            "required": true,
+            "defaultValue": "يسعدني التعاون معك لتحويل فكرتك إلى تجربة رقمية احترافية ومميزة.",
+            "maxLength": 220
+        },
+        {
+            "key": "email",
+            "label": "البريد الإلكتروني",
+            "type": "text",
+            "inputType": "email",
+            "required": true,
+            "defaultValue": "hello@example.com",
+            "placeholder": "hello@example.com"
+        },
+        {
+            "key": "phone",
+            "label": "رقم الجوال",
+            "type": "text",
+            "required": false,
+            "defaultValue": "+966500000000",
+            "placeholder": "+966500000000"
+        },
+        {
+            "key": "location",
+            "label": "الموقع",
+            "type": "text",
+            "required": false,
+            "defaultValue": "الرياض، السعودية",
+            "placeholder": "مثال: الرياض، السعودية"
+        },
+        {
+            "key": "githubUrl",
+            "label": "رابط GitHub",
+            "type": "text",
+            "inputType": "url",
+            "required": false,
+            "defaultValue": "#",
+            "placeholder": "https://github.com/username"
+        },
+        {
+            "key": "linkedinUrl",
+            "label": "رابط LinkedIn",
+            "type": "text",
+            "inputType": "url",
+            "required": false,
+            "defaultValue": "#",
+            "placeholder": "https://linkedin.com/in/username"
+        },
+        {
+            "key": "cvUrl",
+            "label": "رابط السيرة الذاتية",
+            "type": "text",
+            "inputType": "url",
+            "required": false,
+            "defaultValue": "#",
+            "placeholder": "https://example.com/cv.pdf"
+        },
+        {
+            "key": "portfolioUrl",
+            "label": "رابط الموقع الشخصي",
+            "type": "text",
+            "inputType": "url",
+            "required": false,
+            "defaultValue": "#",
+            "placeholder": "https://example.com"
+        }
+    ]
+}
