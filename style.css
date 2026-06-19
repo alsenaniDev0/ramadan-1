@@ -47,7 +47,7 @@ body {
 
 .label {
     margin: 0 0 8px;
-    font-size: clamp(13px, 3.3vw, 18px);
+    font-size: clamp(23px, 3.3vw, 18px);
     font-weight: 700;
     color: #8a6538;
 }
@@ -55,7 +55,7 @@ body {
 .name {
     margin: 16px auto 0;
     max-width: 92%;
-    font-size: clamp(16px, 4vw, 24px);
+    font-size: clamp(26px, 4vw, 24px);
     line-height: 1.8;
     font-weight: 600;
     color: #6b4725;
