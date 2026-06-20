@@ -1,27 +1,28 @@
 {
     "id": "ramadan-greeting",
-    "name": "بطاقة تهنئة رمضان",
+    "name": "تهنئة رمضان فاخرة",
     "version": "1.0.0",
     "html": "index.html",
     "css": "style.css",
     "fields": [
         {
             "key": "message",
-            "maxLength": 220,
+            "maxLength": 240,
             "type": "textarea",
             "required": true,
-            "defaultValue": "كل عام وأنتم بخير بمناسبة حلول شهر رمضان المبارك، أعاده الله عليكم وعلى أحبابكم بالخير واليمن والبركات.",
+            "defaultValue": "بمناسبة حلول شهر رمضان المبارك، نسأل الله أن يجعله شهر خير وبركة ورحمة عليكم وعلى أحبابكم",
             "label": "نص التهنئة",
             "minLength": 5
         },
         {
-            "key": "name",
-            "maxLength": 50,
-            "type": "text",
-            "required": true,
             "placeholder": "مثال: محمد",
-            "label": "الاسم",
-            "minLength": 2
+            "separator": " و ",
+            "label": "الأسماء",
+            "maxItems": 10,
+            "key": "names",
+            "required": true,
+            "minItems": 1,
+            "type": "names"
         }
     ]
 }

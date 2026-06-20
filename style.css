@@ -1,84 +1,405 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800;900&display=swap');
-
-* {
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Beiruti:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap');
 
 html,
 body {
-    margin: 0;
     width: 100%;
-    min-height: 100%;
-}
-
-body {
-    background: #f6efe3;
-    font-family: "Tajawal", Arial, sans-serif;
-    display: grid;
-    place-items: center;
-}
-
-/* نفس مقاس تصميم الصورة */
-.greeting-card {
-    position: relative;
-    width: min(100%, 430px);
-    aspect-ratio: 736 / 1308;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+    height: 100%;
+    margin: 0;
     overflow: hidden;
 }
 
-/* مكان النص داخل الصورة */
-.text-area {
-    position: absolute;
+body {
+    direction: rtl;
+    font-family: Tajawal, Beiruti, Arial, sans-serif;
+    background: #081b2f;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+}
 
-    /* عدل هذه القيم حسب مكان الفراغ في الصورة */
-    top: 8%;
-    left: 50%;
-    width: 78%;
+.ramadan-greeting-site {
+    width: 100vw;
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: clamp(18px, 4vw, 44px);
+    box-sizing: border-box;
 
-    transform: translateX(-50%);
+    display: grid;
+    place-items: center;
+
+    color: #fff7df;
+    background:
+        radial-gradient(circle at 18% 12%, rgba(241, 199, 111, 0.22), transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(84, 171, 165, 0.22), transparent 32%),
+        radial-gradient(circle at 50% 92%, rgba(250, 213, 142, 0.20), transparent 34%),
+        linear-gradient(145deg, #06182a 0%, #0c2d45 48%, #123c50 100%);
+}
+
+.ramadan-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: clamp(34px, 6vw, 74px) clamp(22px, 5vw, 58px);
+    box-sizing: border-box;
+    overflow: hidden;
+    isolation: isolate;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: clamp(18px, 4vw, 38px);
+
     text-align: center;
-    color: #51351e;
+
+    border-radius: clamp(32px, 5vw, 54px);
+    background:
+        linear-gradient(180deg, rgba(10, 40, 61, 0.94), rgba(6, 27, 47, 0.96)) padding-box,
+        linear-gradient(135deg, #f5d58a 0%, #6fd2c6 28%, #fff0bd 50%, #d4a84d 74%, #2b807d 100%) border-box;
+    border: 3px solid transparent;
+
+    box-shadow:
+        0 38px 100px rgba(0, 0, 0, 0.34),
+        0 16px 42px rgba(0, 0, 0, 0.22),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.14),
+        inset 0 0 0 10px rgba(255, 223, 148, 0.06);
 }
 
-.label {
-    margin: 0 0 8px;
-    font-size: 56px;
-    font-weight: 700;
-    color: #8a6538;
+.card-glow {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 50% 16%, rgba(255, 225, 150, 0.24), transparent 34%),
+        radial-gradient(circle at 50% 72%, rgba(76, 211, 199, 0.16), transparent 38%);
 }
 
-.name {
-    margin: 16px auto 0;
-    max-width: 92%;
-    font-size: 56px;
-    line-height: 1.8;
-    font-weight: 600;
-    color: #6b4725;
+.card-pattern {
+    position: absolute;
+    inset: 22px;
+    z-index: -2;
+    pointer-events: none;
+    border-radius: clamp(24px, 4vw, 44px);
+    opacity: 0.34;
+    background-image:
+        linear-gradient(45deg, rgba(255, 230, 170, 0.07) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255, 230, 170, 0.07) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255, 230, 170, 0.07) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255, 230, 170, 0.07) 75%);
+    background-size: 36px 36px;
+    background-position: 0 0, 0 18px, 18px -18px, -18px 0;
+    mask-image: radial-gradient(circle at center, black 44%, transparent 86%);
+}
+
+.stars span {
+    position: absolute;
+    z-index: -1;
+    color: rgba(255, 228, 158, 0.62);
+    font-size: clamp(18px, 3vw, 34px);
+    line-height: 1;
+}
+
+.stars span:nth-child(1) {
+    top: 10%;
+    right: 18%;
+}
+
+.stars span:nth-child(2) {
+    top: 18%;
+    left: 20%;
+}
+
+.stars span:nth-child(3) {
+    top: 42%;
+    right: 9%;
+}
+
+.stars span:nth-child(4) {
+    top: 52%;
+    left: 10%;
+}
+
+.stars span:nth-child(5) {
+    bottom: 17%;
+    right: 20%;
+}
+
+.corner {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    pointer-events: none;
+}
+
+.corner::before,
+.corner::after {
+    content: "";
+    position: absolute;
+    border-color: rgba(245, 213, 138, 0.28);
+    border-style: solid;
+}
+
+.corner::before {
+    inset: 0;
+    border-width: 2px;
+}
+
+.corner::after {
+    inset: 14px;
+    border-width: 1px;
+    opacity: 0.68;
+}
+
+.corner-top {
+    top: 26px;
+    right: 26px;
+}
+
+.corner-top::before,
+.corner-top::after {
+    border-left: 0;
+    border-bottom: 0;
+    border-radius: 0 36px 0 0;
+}
+
+.corner-bottom {
+    bottom: 26px;
+    left: 26px;
+}
+
+.corner-bottom::before,
+.corner-bottom::after {
+    border-right: 0;
+    border-top: 0;
+    border-radius: 0 0 0 36px;
+}
+
+.ramadan-header {
+    display: grid;
+    justify-items: center;
+    gap: 16px;
+}
+
+.small-title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 26px;
+    border-radius: 999px;
+
+    background:
+        linear-gradient(135deg, rgba(255, 236, 185, 0.96), rgba(96, 211, 200, 0.88));
+    color: #073047;
+
+    border: 1px solid rgba(255, 236, 185, 0.45);
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65);
+
+    font-size: clamp(16px, 2.2vw, 28px);
+    font-weight: 900;
+    letter-spacing: 0.3px;
+}
+
+.moon-frame {
+    position: relative;
+    width: clamp(112px, 16vw, 170px);
+    height: clamp(112px, 16vw, 170px);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 36% 28%, rgba(255, 255, 255, 0.42), transparent 32%),
+        linear-gradient(135deg, rgba(255, 237, 180, 0.16), rgba(91, 217, 206, 0.10));
+    border: 1px solid rgba(255, 232, 165, 0.28);
+    box-shadow:
+        0 20px 46px rgba(0, 0, 0, 0.16),
+        inset 0 0 28px rgba(255, 225, 150, 0.08);
+}
+
+.icon-frame {
+    display: grid;
+    place-items: center;
+    padding: 8px;
+    border-radius: 28px;
+    background:
+        linear-gradient(135deg, rgba(255, 237, 184, 0.28), rgba(81, 211, 200, 0.18));
+    border: 1px solid rgba(255, 228, 158, 0.24);
+}
+
+.icon {
+    width: clamp(72px, 10vw, 112px);
+    height: clamp(72px, 10vw, 112px);
+    display: grid;
+    place-items: center;
+    border-radius: 24px;
+
+    background:
+        radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.55), transparent 42%),
+        linear-gradient(135deg, #fff0bd, #4dd0c5);
+
+    color: #06283e;
+    font-size: clamp(38px, 6vw, 64px);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.66);
+}
+
+.content {
+    display: grid;
+    gap: 24px;
+    justify-items: center;
 }
 
 .message {
-    margin: 0;
-    font-family: "Amiri", serif;
-    font-size: 56px;
-    line-height: 1.25;
-    font-weight: 700;
-    color: #5a3418;
-    margin-top: 30%;
-    margin-bottom: 20%;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff1c6;
+
+    font-size: clamp(23px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.9;
+
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+    text-shadow: 0 3px 16px rgba(0, 0, 0, 0.24);
 }
 
-/* للجوال */
-@media (max-width: 480px) {
-    .greeting-card {
-        width: 100vw;
+.names {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+
+    color: #ffffff;
+    font-size: clamp(42px, 8vw, 88px);
+    font-weight: 900;
+    line-height: 1.25;
+
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+    letter-spacing: -0.6px;
+    text-shadow:
+        0 2px 0 rgba(255, 225, 150, 0.18),
+        0 14px 34px rgba(0, 0, 0, 0.24);
+}
+
+.names::before {
+    content: "";
+    display: block;
+    width: 94px;
+    height: 2px;
+    margin: 0 auto 22px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, transparent, rgba(255, 225, 150, 0.95), transparent);
+}
+
+.names::after {
+    content: "";
+    display: block;
+    width: 190px;
+    height: 4px;
+    margin: 28px auto 0;
+    border-radius: 999px;
+    background:
+        linear-gradient(90deg, transparent, #48cfc4, #ffe39d, #48cfc4, transparent);
+    box-shadow: 0 8px 20px rgba(72, 207, 196, 0.20);
+}
+
+.dome,
+.minaret {
+    display: block;
+    background:
+        linear-gradient(180deg, rgba(255, 235, 176, 0.9), rgba(72, 207, 196, 0.62));
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+}
+
+.dome-main {
+    width: clamp(92px, 16vw, 160px);
+    height: clamp(48px, 8vw, 86px);
+    border-radius: 90px 90px 16px 16px;
+}
+
+.dome-small {
+    width: clamp(48px, 8vw, 78px);
+    height: clamp(34px, 5vw, 56px);
+    border-radius: 60px 60px 12px 12px;
+}
+
+.minaret {
+    position: relative;
+    width: clamp(20px, 3vw, 34px);
+    height: clamp(74px, 11vw, 128px);
+    border-radius: 999px 999px 10px 10px;
+}
+
+.minaret::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: 20px solid rgba(255, 235, 176, 0.92);
+}
+
+.closing {
+    position: relative;
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+
+    color: #06283e;
+    font-size: clamp(20px, 3vw, 36px);
+    font-weight: 900;
+    letter-spacing: 0.2px;
+
+    padding: 12px 30px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #fff0bd, #5ed9ce);
+    border: 1px solid rgba(255, 238, 191, 0.48);
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.68);
+}
+
+@media (max-width: 640px) {
+    .ramadan-greeting-site {
+        padding: 16px;
     }
 
-    .text-area {
-        width: 82%;
+    .ramadan-card {
+        min-height: 760px;
+        padding: 42px 22px;
+        border-radius: 34px;
+    }
+
+    .message {
+        font-size: 24px;
+        line-height: 1.85;
+    }
+
+    .names {
+        font-size: 44px;
+    }
+
+    .corner {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media print {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 }

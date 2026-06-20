@@ -2,30 +2,52 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بطاقة تهنئة رمضان</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <main class="ramadan-greeting-site">
+        <section class="ramadan-card">
+            <div class="card-glow"></div>
+            <div class="card-pattern"></div>
 
-    <main class="greeting-card" style="background-image: url('assets/images/bg.png');">
+            <div class="stars" aria-hidden="true">
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+            </div>
 
-        <section class="text-area">
-            <p class="label">إهداء خاص إلى</p>
+            <div class="corner corner-top"></div>
+            <div class="corner corner-bottom"></div>
+            <img class="moon" style="height: 136px;width: 100px;" src="assets/images/design-2.png" alt="رمضان كريم">
+            <div class="ramadan-header">
+                <span class="small-title">تهنئة رمضان</span>
 
-            <p class="message">
-                {{message}}
-            </p>
+                <div class="moon-frame">
+                    <img class="moon" style="height: 136px;width: 100px;" src="assets/images/moon.svg" alt="رمضان كريم">
+                </div>
+            </div>
 
-            <h1 class="name">
-                {{name}}
-            </h1>
+            <div class="content">
+                <p class="message">
+                    {{message}}
+                </p>
+
+                <h1 class="names">
+                    {{names}}
+                </h1>
+            </div>
+
+            <div class="closing">
+                رمضان مبارك
+            </div>
         </section>
-
     </main>
-
 </body>
 
 </html>
