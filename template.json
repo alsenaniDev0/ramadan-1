@@ -15,14 +15,14 @@
             "minLength": 5
         },
         {
+            "type": "text",
+            "label": "اسمك",
+            "maxLength": 40,
             "placeholder": "مثال: محمد",
-            "separator": " و ",
-            "label": "الأسماء",
-            "maxItems": 10,
-            "key": "names",
+            "minLength": 2,
             "required": true,
-            "minItems": 1,
-            "type": "names"
+            "key": "name",
+            "defaultValue": "محمد"
         }
     ]
 }

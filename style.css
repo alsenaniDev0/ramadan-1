@@ -176,7 +176,7 @@ body {
 .ramadan-header {
     display: grid;
     justify-items: center;
-    gap: 16px;
+    gap: 60px;
 }
 
 .small-title {
@@ -247,7 +247,7 @@ body {
 
 .content {
     display: grid;
-    gap: 24px;
+    gap: 100px;
     justify-items: center;
 }
 
@@ -364,6 +364,19 @@ body {
     box-shadow:
         0 12px 32px rgba(0, 0, 0, 0.18),
         inset 0 1px 0 rgba(255, 255, 255, 0.68);
+}
+
+.moon {
+    height: 75%;
+    width: 80%;
+}
+
+.light {
+    position: absolute;
+    left: 3%;
+    top: 0;
+    height: 16vh;
+    width: 15vh;
 }
 
 @media (max-width: 640px) {
